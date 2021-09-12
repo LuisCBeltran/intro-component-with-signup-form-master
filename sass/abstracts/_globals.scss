@@ -1,0 +1,22 @@
+@use '../abstracts/variables.scss' as v;
+@use '../abstracts/mixins.scss' as m;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-image: url('./images/bg-intro-mobile.png'), linear-gradient(v.$orange, v.$orange);
+    background-blend-mode: overlay;
+    background-position: center;
+    @include m.media-up(dt) {
+        background-image: url('./images/bg-intro-desktop.png'), linear-gradient(v.$orange, v.$orange);
+    }
+}
+

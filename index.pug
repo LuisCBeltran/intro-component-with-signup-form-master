@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="icon", type="image/png", sizes="32x32", href="./images/favicon-32x32.png")
+        link(rel="stylesheet", href="main.css")
+        script(src="script.js") 
+        title Frontend Mentor | Intro component with sign up form
+    body 
+        main
+            .description
+                h1 Learn to code by watching others
+                p See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. 
+            .promo-container 
+                a.try-button 
+                    p <em>Try it free 7 days</em> then $20/mo. thereafter
+                .form-container
+                    .input-container
+                        input.input#firstName(type="text", placeholder="First Name")
+                        .warning-icon-container#warningIconFirstName
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+                    .warning-container#warningFirstName
+                        p.input__warning#FNWarning First Name cannot be empty
+                    .input-container
+                        input.input#lastName(type="text", placeholder="Last Name")
+                        .warning-icon-container#warningIconLastName
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+                    .warning-container#warningLastName
+                        p.input__warning#LNWarning Last Name cannot be empty
+                    .input-container
+                        input.input#email(type="email", placeholder="Email Address")
+                        .warning-icon-container#warningIconEmail
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+                    .warning-container#warningEmail
+                        p.input__warning#EWarning Looks like this is not an email
+                    .input-container
+                        input.input#password(type="password", placeholder="Password")
+                        .warning-icon-container#warningIconPassword
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="12"/><rect fill="#FFF" x="11" y="6" width="2" height="9" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+                    .warning-container#warningPassword
+                        p.input__warning#PWarning Password cannot be empty
+                    button#claimButton(onclick="validateEmptyFirstName(); validateEmptyLastName(); validateEmail(); validateEmptyPassword()") CLAIM YOUR FREE TRIAL
+                    p.terms By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>
+        footer 
+            p Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.<br>Coded by <a href="https://github.com/LuisCBeltran">Luis C. Beltrán</a>.
